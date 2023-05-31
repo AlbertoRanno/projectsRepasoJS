@@ -1,0 +1,14 @@
+function confirmEnding(str, target) {
+let frase = str.length
+console.log(frase)
+let stringFinal = target.length
+console.log(stringFinal)
+//console.log(str.slice(1))
+let fraseRecortada = str.slice(frase - stringFinal)
+console.log(fraseRecortada)
+
+  return fraseRecortada === target;
+
+}
+
+console.log(confirmEnding("Bastian", "n"));

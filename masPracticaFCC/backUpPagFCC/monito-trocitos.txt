@@ -1,0 +1,21 @@
+function chunkArrayInGroups(arr, size) {
+  let newArr = []
+  /*
+  let fragment1 = arr.slice(size*0,size*1)
+  console.log(fragment1)
+  let fragment2 = arr.slice (size*1, size*2)
+  console.log(fragment2)
+  let fragment3 = arr.slice (size*2, size*3)
+  console.log(fragment3)
+  let fragment4 = arr.slice (size*3, size*4)
+  console.log(fragment4)
+  let fragment5 = arr.slice (size*4, size*5)
+  console.log(fragment5)*/
+  for (let i=0; i<(arr.length/size) ; i++){
+    newArr.push(arr.slice(size*i,size*(i+1)))
+  }
+  return newArr;
+}
+
+//console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2));

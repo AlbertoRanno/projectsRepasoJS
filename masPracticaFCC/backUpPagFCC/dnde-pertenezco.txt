@@ -1,0 +1,20 @@
+function getIndexToIns(arr, num) {
+  //https://www.w3schools.com/jsref/jsref_sort.asp
+  let newArr = arr.sort((a, b) => a - b)
+  //console.log(newArr)
+  for (let i=0; i<newArr.length ; i++){
+    if(num<=arr[i]){
+      return i
+    } 
+  }
+  return newArr.length
+}
+
+
+console.log(getIndexToIns([2, 5, 10], 15));
+console.log(getIndexToIns([], 1));
+console.log(getIndexToIns([404, 60], 50));
+console.log(getIndexToIns([10, 20, 30, 40, 50], 35));
+console.log(getIndexToIns([10, 20, 30, 40, 50], 30));
+
+

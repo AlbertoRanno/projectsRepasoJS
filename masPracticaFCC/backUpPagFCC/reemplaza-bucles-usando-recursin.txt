@@ -1,0 +1,21 @@
+function sum(arr, n) {
+  // Cambia solo el código debajo de esta línea
+  if (n <= 0) {
+      return 0; //defino que la suma de ningún elemento o negativo dará cero
+    } else {
+      return sum(arr, n-1) + arr[n-1]
+    }
+  // Cambia solo el código encima de esta línea
+}
+
+console.log(sum([1],0))
+console.log(sum([2, 3, 4], 1))
+console.log(sum([2, 3, 4, 5], 3)) 
+    //sum([2,3,4,5],3-1)+arr[3-1] -> 
+    //sum([2,3,4,5],2)+arr[2] ->
+    //sum([2,3,4,5],2-1)+arr[2-1]+arr[2] ->  
+    //sum([2,3,4,5],1)+arr[1]+arr[2] ->
+    //sum([2,3,4,5],1-1)+arr[1-1]+arr[1]+arr[2] ->
+    //0+arr[0]+arr[1]+arr[2] -> 
+    //0+2+3+4
+    //9

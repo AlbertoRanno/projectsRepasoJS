@@ -1,0 +1,6 @@
+function Dog (){
+  this.name = "Firu";
+  this.color = "Brown";
+  this.numLegs = 5
+
+}
